@@ -37,7 +37,6 @@ public class LibroRest {
 	
 	@RequestMapping(value = "/book", method = RequestMethod.GET)
 	private ResponseEntity<Optional<Libro>> listarLibroId(@RequestParam(value = "id") Long id){
-		System.out.println("Consumiendo Servicio");
 		return ResponseEntity.ok(libroService.LibrofindById(id));
 	}
 	

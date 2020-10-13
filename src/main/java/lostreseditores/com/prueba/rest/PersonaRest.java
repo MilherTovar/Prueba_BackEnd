@@ -38,7 +38,6 @@ public class PersonaRest {
 	
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	private ResponseEntity<Optional<Persona>> listarPersonaId(@RequestParam(value = "id") Long id){
-		System.out.println("Consumiendo Servicio");
 		return ResponseEntity.ok(personaService.findById(id));
 	}
 	
